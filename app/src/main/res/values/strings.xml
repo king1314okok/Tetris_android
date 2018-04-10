@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Tetris</string>
+    <string name="game_over_textview_string">GAME OVER</string>
+    <string name="game_over_textview_string2">Tap to play again</string>
+    <string name="title_activity_snake">SnakeActivity</string>
+    <string name="title_activity_tetris">TetrisActivity</string>
+    <string name="title_activity_tetris_activity_aw">TetrisActivityAW</string>
+</resources>

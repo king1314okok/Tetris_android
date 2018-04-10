@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sues.wangyi.tetris.TetrisActivityAW"
+    android:orientation="vertical"
+
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/bgLayout"
+        android:background="@drawable/bgi02"
+        android:orientation="vertical"
+        >
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_above="@id/controlBtn"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <com.sues.wangyi.tetris.tetris.TetrisViewAW
+                android:id="@+id/tetrisViewAW1"
+                android:layout_width="179dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/tetrisblock" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <com.sues.wangyi.tetris.tetris.NextBlockView
+                android:id="@+id/nextBlockView1"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/nextblock"
+                />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="10dp"
+                >
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:src="@drawable/score" />
+
+                    <TextView
+                        android:id="@+id/score"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="right"
+                        android:text="0"
+                        android:textSize="20dp"
+                        />
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                >
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:src="@drawable/level"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:text="0"
+                        android:layout_gravity="center"
+                        android:gravity="right"
+                        />
+                </FrameLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                >
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:src="@drawable/lines"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:text="0"
+                        android:layout_gravity="center"
+                        android:gravity="right"
+                        />
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="0dp"
+                >
+
+                <ImageButton
+                    android:id="@+id/startGameBtn"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:onClick="startGame"
+                    android:background="#00000000"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/start_p"
+                    />
+
+                <ImageButton
+                    android:id="@+id/pauseGameBtn"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:onClick="pauseGame"
+                    android:background="#00000000"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/pause_p"
+                    />
+
+
+                <Button
+                    android:id="@+id/stopGameBtn"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:onClick="stopGame"
+                    android:text="结束"
+                    android:background="#00000000"
+
+                    />
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:id="@+id/controlBtn"
+        >
+
+        <ImageButton
+            android:id="@+id/button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:onClick="toLeft"
+            android:background="#00000000"
+            android:scaleType="fitXY"
+            android:src="@drawable/left_p"
+            />
+
+        <ImageButton
+            android:id="@+id/button2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:onClick="toRoute"
+            android:text="转"
+            android:background="#00000000"
+            android:scaleType="fitXY"
+            android:src="@drawable/up_p"
+            />
+
+        <ImageButton
+            android:id="@+id/button3"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:onClick="toRight"
+            android:background="#00000000"
+            android:scaleType="fitXY"
+            android:src="@drawable/right_p"
+            />
+
+        <ImageButton
+            android:src="@drawable/down_p"
+            android:id="@+id/button4"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:onClick="toDown"
+            android:background="#00000000"
+            android:scaleType="fitXY"
+             />
+
+    </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

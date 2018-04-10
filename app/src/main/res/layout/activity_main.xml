@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sues.wangyi.tetris.MainActivity">
+
+
+<RelativeLayout
+    android:id="@+id/mainBg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgi01"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/startGameBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开始游戏" />
+
+
+        <Button
+            android:id="@+id/turnOffMusicBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="音乐控制" />
+
+        <!--<Button-->
+            <!--android:id="@+id/webViewPageBtn"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="进入网页" />-->
+
+        <Button
+            android:id="@+id/quitGameBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="退出游戏"
+            />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
